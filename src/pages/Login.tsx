@@ -8,10 +8,18 @@ const Login = () => {
   const [secretPhrase, setSecretPhrase] = useState("");
   const navigate = useNavigate();
 
+  // This will eventually contain Firebase login logic
   const handleLogin = () => {
     if (secretPhrase) {
+      // TEMP: For now, if any secret is entered, go home.
+      // We will replace this with Firebase Auth logic later.
       navigate("/home");
     }
+  };
+
+  // --- NEW HANDLER for Cryptic Hunt button ---
+  const handleStartHunt = () => {
+    navigate("/hunt");
   };
 
   return (
@@ -31,6 +39,7 @@ const Login = () => {
             placeholder=""
             value={secretPhrase}
             onChange={(e) => setSecretPhrase(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && handleLogin()}
             className="h-16 text-2xl text-center bg-transparent border-2 border-primary/50 text-foreground placeholder:text-foreground/60 rounded-2xl"
           />
 
@@ -41,8 +50,10 @@ const Login = () => {
             Login
           </Button>
 
+          {/* --- FIX APPLIED HERE --- */}
           <Button
             variant="outline"
+            onClick={handleStartHunt} // <-- NOW CALLS THE NAVIGATE FUNCTION
             className="w-full h-16 text-2xl font-medium bg-transparent border-2 border-primary/50 text-foreground hover:bg-primary/10 rounded-2xl"
           >
             Cryptic Hunt
