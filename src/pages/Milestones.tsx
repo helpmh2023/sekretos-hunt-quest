@@ -12,21 +12,25 @@ const Milestones = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-dark via-background to-teal-dark">
+    <div className="min-h-screen bg-black">
       <Navigation />
       
       <div className="pt-32 px-12">
         <div className="max-w-6xl mx-auto bg-teal-overlay/80 backdrop-blur-md rounded-3xl p-12 relative overflow-hidden">
-          {/* Background Logo */}
+          {/* Background Logo with teal background */}
           <div 
-            className="absolute inset-0 flex items-center justify-center opacity-10"
-            style={{
-              backgroundImage: `url(${logo})`,
-              backgroundSize: '60%',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
-          />
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            <div 
+              className="w-[60%] h-[60%] flex items-center justify-center bg-teal-medium/30 rounded-full"
+              style={{
+                backgroundImage: `url(${logo})`,
+                backgroundSize: '80%',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
+          </div>
 
           <div className="relative z-10 grid grid-cols-[300px_1fr] gap-12">
             {/* Left - ELO Points */}

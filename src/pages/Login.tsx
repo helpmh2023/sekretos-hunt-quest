@@ -29,30 +29,25 @@ const Login = () => {
 
         <div className="space-y-6">
           <Input
-            type="text"
-            placeholder="Enter Agent ID"
-            value={agentId}
-            onChange={(e) => setAgentId(e.target.value)}
-            className="h-16 text-2xl text-center bg-transparent border-2 border-primary/50 text-foreground placeholder:text-foreground/60 rounded-2xl"
-          />
-          
-          <Input
             type="password"
-            placeholder="Enter Secret Phrase"
+            placeholder=""
             value={secretPhrase}
             onChange={(e) => setSecretPhrase(e.target.value)}
             className="h-16 text-2xl text-center bg-transparent border-2 border-primary/50 text-foreground placeholder:text-foreground/60 rounded-2xl"
           />
-
-          <p className="text-center text-foreground/80 text-sm">
-            Not registered yet? Apply to the club.
-          </p>
 
           <Button
             onClick={handleLogin}
             className="w-full h-16 text-2xl font-medium bg-accent hover:bg-accent/80 text-accent-foreground rounded-2xl"
           >
             Login
+          </Button>
+
+          <Button
+            variant="outline"
+            className="w-full h-16 text-2xl font-medium bg-transparent border-2 border-primary/50 text-foreground hover:bg-primary/10 rounded-2xl"
+          >
+            Cryptic Hunt
           </Button>
         </div>
       </div>

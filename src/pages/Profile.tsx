@@ -1,8 +1,12 @@
 import Navigation from "@/components/Navigation";
+import bg4 from "@/assets/bg4.png";
 
 const Profile = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-dark via-background to-teal-dark">
+    <div 
+      className="min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bg4})` }}
+    >
       <Navigation />
       
       <div className="pt-32 px-12">
