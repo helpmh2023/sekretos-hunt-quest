@@ -60,7 +60,7 @@ const Missions = () => {
         <div className="grid grid-cols-4 gap-6 mb-8 max-w-6xl mx-auto">
           <div className="bg-teal-overlay/80 backdrop-blur-md rounded-2xl p-8 text-center border-2 border-primary/30">
             <div className="text-sm mb-2 text-foreground/80 uppercase tracking-wider">Total</div>
-            <div className="text-6xl font-light text-accent">6</div>
+            <div className="text-6xl font-light text-accent">5</div>
           </div>
           
           <div className="bg-teal-overlay/80 backdrop-blur-md rounded-2xl p-8 text-center border-2 border-primary/30">
@@ -70,7 +70,7 @@ const Missions = () => {
           
           <div className="bg-teal-overlay/80 backdrop-blur-md rounded-2xl p-8 text-center border-2 border-primary/30">
             <div className="text-sm mb-2 text-foreground/80 uppercase tracking-wider">Active</div>
-            <div className="text-6xl font-light text-accent">6</div>
+            <div className="text-6xl font-light text-accent">5</div>
           </div>
           
           <div className="bg-teal-overlay/80 backdrop-blur-md rounded-2xl p-8 text-center border-2 border-primary/30">

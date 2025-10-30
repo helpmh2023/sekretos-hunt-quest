@@ -82,8 +82,12 @@ const Login = () => {
         >
           <div className="w-full max-w-2xl mx-auto p-12 bg-teal-overlay/80 backdrop-blur-md rounded-3xl">
             <div className="text-center mb-12">
-              <h1 className="text-5xl font-light mb-4 text-foreground">Welcome to Sekretos</h1>
-              <p className="text-xl text-foreground/90"></p>
+              <h1
+  className="text-white text-[44px] md:text-[64px] lg:text-[72px] leading-[1.05] font-black tracking-[-0.075em] drop-shadow-[0_2px_0_rgba(0,0,0,0.35)]"
+>
+  Welcome to Sekretos
+</h1>
+              
             </div>
 
             <div className="space-y-6">

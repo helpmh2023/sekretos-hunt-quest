@@ -105,14 +105,14 @@ const CrypticHunt = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, agentData.email, agentData.secret);
       const user = userCredential.user;
 
-      // 4. Create User Profile in the 'users' collection
       await setDoc(doc(db, "users", user.uid), {
         agentName: agentData.name,
-        agentSecret: agentData.secret, // Stored here for login lookup
-        email: agentData.email, // Stored here for Auth sign-in
-        points: 100, // Initial points for solving the hunt
+        agentSecret: agentData.secret,
+        email: agentData.email,
+        points: 100,
         rank: "INITIATE",
         createdAt: serverTimestamp(),
+        completedMissions: ["HUNT_01"], // <-- ADD THIS LINE
       });
 
       // 5. Finalize the 'secrets' document with the real UID
@@ -221,7 +221,7 @@ const CrypticHunt = () => {
             </div>
           </div>
           <p className="text-sm text-red-400 text-center font-medium">
-            !! WRITE THIS SECRET DOWN NOW. IT IS YOUR ONLY KEY TO LOGIN. !!
+            !! WRITE THIS SECRET DOWN NOW. IT IS YOUR ONLY KEY TO LOGIN. THIS KEY WILL NEVER BE DISPLAYED AGAIN !!
           </p>
           <Button 
             onClick={handleProceedToLogin}
