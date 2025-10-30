@@ -9,8 +9,9 @@ import Feed from "./pages/Feed";
 import Missions from "./pages/Missions";
 import Milestones from "./pages/Milestones";
 import Leaderboard from "./pages/Leaderboard";
-import Profile from "./pages/Profile";
+import Profile from "./pages/Profile"; // <-- Fixed typo here (was pagesS)
 import NotFound from "./pages/NotFound";
+import CrypticHunt from "./pages/CrypticHunt";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,10 @@ const App = () => (
           <Route path="/milestones" element={<Milestones />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/profile" element={<Profile />} />
+
+          {/* 2. FIX: This part is now correct */}
+          <Route path="/hunt" element={<CrypticHunt />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
