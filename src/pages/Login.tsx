@@ -83,13 +83,13 @@ const Login = () => {
           <div className="w-full max-w-2xl mx-auto p-12 bg-teal-overlay/80 backdrop-blur-md rounded-3xl">
             <div className="text-center mb-12">
               <h1 className="text-5xl font-light mb-4 text-foreground">Welcome to Sekretos</h1>
-              <p className="text-xl text-foreground/90">Enter your Agent Secret to access the network.</p>
+              <p className="text-xl text-foreground/90"></p>
             </div>
 
             <div className="space-y-6">
               <Input
                 type="password"
-                placeholder="Enter Agent Secret"
+                placeholder=""
                 value={agentSecret}
                 onChange={(e) => setAgentSecret(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleLogin()}
