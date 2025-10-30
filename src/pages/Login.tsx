@@ -5,13 +5,11 @@ import { Input } from "@/components/ui/input";
 import bg1 from "@/assets/bg1.webp";
 
 const Login = () => {
-  const [agentId, setAgentId] = useState("");
   const [secretPhrase, setSecretPhrase] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Simple validation - in production, you'd verify credentials
-    if (agentId && secretPhrase) {
+    if (secretPhrase) {
       navigate("/home");
     }
   };
