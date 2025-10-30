@@ -22,7 +22,7 @@ const Login = () => {
       <div className="w-full max-w-2xl mx-auto p-12 bg-teal-overlay/80 backdrop-blur-md rounded-3xl">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-light mb-4 text-foreground">Welcome to Sekretos</h1>
-          <p className="text-xl text-foreground/90">Enter secret phrase and agent id to access the website</p>
+          <p className="text-xl text-foreground/90">Please enter your secret phrase</p>
         </div>
 
         <div className="space-y-6">
