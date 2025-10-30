@@ -1,13 +1,25 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.png"; //
+// --- NEW FIREBASE IMPORTS ---
+import { auth } from "../firebase/config";
+import { signOut } from "firebase/auth";
+import { toast } from "sonner";
+
 
 const Navigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
   
-  const handleLogout = () => {
-    navigate("/");
+  const handleLogout = async () => {
+    try {
+        await signOut(auth);
+        toast.success("Logged out successfully.");
+        navigate("/"); // Redirect to the login page
+    } catch (error) {
+        console.error("Logout error:", error);
+        toast.error("Logout failed. Please try again.");
+    }
   };
 
   const isActive = (path: string) => location.pathname === path;
