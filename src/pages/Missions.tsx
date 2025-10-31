@@ -6,14 +6,14 @@ const Missions = () => {
   const missions = [
     {
       difficulty: "EASY",
-      title: "Decode the First Message",
-      description: "Uncover the hidden meaning in the cryptic transmission",
+      title: "Recruitment",
+      description: "We seek those who refuse to settle for an ordinary life. Our mission is to find them, guide them, and help them unlock the strength they’ve always possessed.",
       reward: "+100",
     },
     {
       difficulty: "MEDIUM",
-      title: "Infiltrate the Network",
-      description: "Establish secure connection to the inner circle",
+      title: "Spread the word",
+      description: "Vandalise 13th Street",
       reward: "+250",
     },
     {
@@ -29,10 +29,10 @@ const Missions = () => {
       reward: "+100",
     },
     {
-      difficulty: "MEDIUM",
-      title: "Operation Veilmarch",
-      description: "Discreetly place the symbol in public.",
-      reward: "+250",
+      difficulty: "DIFFICULT",
+      title: "The First Heist",
+      description: "Rob Manhattan Bank",
+      reward: "+450",
     },
   ];
 

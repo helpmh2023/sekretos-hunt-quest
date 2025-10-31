@@ -3,7 +3,7 @@ import logo from "@/assets/logo.png";
 
 const Milestones = () => {
   const milestones = [
-    { elo: "+100", title: "The First Bloom", description: "initiation of the first successful operation." },
+    { elo: "+100", title: "The First Blood", description: "initiation of the first successful operation." },
     { elo: "+150", title: "Eyes Open", description: "establishing awareness and observation network." },
     { elo: "+200", title: "Whispers Heard", description: "decoding and exchanging the first message." },
     { elo: "+400", title: "The Silent Handshake", description: "linking two Sekretos cells without public trace." },
